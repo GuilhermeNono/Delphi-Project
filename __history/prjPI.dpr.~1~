@@ -2,13 +2,13 @@ program prjPI;
 
 uses
   Vcl.Forms,
-  untPI in 'untPI.pas' {frmPI};
+  untPI in 'untPI.pas' {Form1};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmPI, frmPI);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
