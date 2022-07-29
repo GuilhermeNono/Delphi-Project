@@ -1,0 +1,46 @@
+unit untPI;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmPI = class(TForm)
+    rgpSexo: TRadioGroup;
+    edtAlt: TEdit;
+    lblAltura: TLabel;
+    lblPI: TLabel;
+    edtPI: TEdit;
+    btnCalc: TButton;
+    btnSair: TButton;
+    btnLimpar: TButton;
+    procedure btnSairClick(Sender: TObject);
+     procedure btnLimparClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPI: TfrmPI;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPI.btnLimparClick(Sender: TObject);
+begin
+   edtAlt.Clear;
+   edtPI.Clear;
+   rgpSexo.ItemIndex := -1;
+end;
+
+procedure TfrmPI.btnSairClick(Sender: TObject);
+begin
+ close;
+end;
+
+end.
